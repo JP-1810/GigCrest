@@ -117,3 +117,102 @@ Event → AI Engine → Payout Calculation + Fraud Check
 
 ## Adversarial Defence & Anti-Spoofing Strate
 
+## Adversarial Defense & Anti-Spoofing Strategy
+
+### Core Principle
+Our system replaces GPS-only verification with a **multi-modal trust model**, where a claim is validated only when **location, device signals, movement behavior, and environmental evidence are consistent**.
+
+---
+
+## Phase 1: Differentiation (Real vs Spoofed Claims)
+
+We use a **Risk-Based Verification Engine** to distinguish genuine delivery workers from spoofed claims.
+
+- Detect anomalies such as:
+  - unrealistic movement (teleporting, impossible speed)  
+  - mismatch between GPS and motion sensors  
+  - device tampering (mock location, emulator)  
+
+- Suspicious claims trigger **AI-guided live verification**, where users must provide real-time evidence.
+
+- The system validates:
+  - continuity across captured frames  
+  - weather consistency with external data  
+  - alignment between visual environment and claimed location  
+
+**Key Insight:**  
+While GPS can be spoofed, **real-time environmental evidence + motion + guided capture is extremely difficult to fake**, enabling strong differentiation.
+
+---
+
+## Phase 2: Data (Beyond GPS for Fraud Detection)
+
+To detect both individual spoofing and coordinated fraud rings, the system analyzes multiple data sources:
+
+### Movement & Behavior
+- speed, route continuity, stop duration  
+- impossible travel patterns  
+
+### Device & Sensor Signals
+- mock location detection  
+- rooted/emulator indicators  
+- accelerometer & gyroscope consistency  
+
+### Sensor Fusion
+- GPS + motion sensors + network location cross-check  
+
+### Environmental Evidence
+- short-interval panoramic image sequence  
+- timestamp continuity  
+- weather and lighting consistency  
+
+### Coordination Signals
+- simultaneous claims from multiple users  
+- similar behavioral/device patterns  
+- claim bursts during weather events  
+
+This multi-source approach ensures **context-aware anomaly detection**, not just GPS validation.
+
+---
+
+## Phase 3: UX Balance (Fairness & Usability)
+
+The system is designed to be **risk-adaptive and fair**, ensuring genuine users are not penalized.
+
+- **Low Risk:** No extra verification (smooth experience)  
+- **Medium Risk:** Quick guided check  
+- **High Risk:** Panoramic live verification + temporary payout hold  
+- **Edge Cases:** Manual review  
+
+### Fairness Measures
+- No rejection based on a single signal  
+- Users can retry verification  
+- Handles poor network conditions during severe weather  
+- Manual review for ambiguous cases  
+
+This ensures a balance between **fraud prevention and user trust**.
+
+---
+
+## Key Feature: Rapid Panoramic Re-Verification
+
+When anomalies are detected, the system triggers a **live guided capture workflow**:
+
+- User captures multiple images in short intervals  
+- App provides directional prompts (turn, tilt, rotate)  
+
+The system checks:
+- frame-to-frame continuity  
+- real-time environmental authenticity  
+- consistency with weather and location  
+ 
+Short-interval capture acts as a **liveness proof**, making it extremely difficult to use edited or AI-generated evidence.
+
+---
+
+
+> We move from **“GPS-based trust”** to **“multi-modal situational trust”**, ensuring every claim is backed by consistent real-world evidence.
+
+
+
+
