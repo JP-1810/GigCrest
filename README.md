@@ -115,5 +115,5 @@ Event → AI Engine → Payout Calculation + Fraud Check
 - Partner integrations (Zomato, Swiggy, Uber, Rapido) for automated earnings verification
 - SMS/WhatsApp fallback notifications for low-connectivity areas
 
-## Adversarial 
+## Adversarial Defence & Anti-Spoofing Strate
 
